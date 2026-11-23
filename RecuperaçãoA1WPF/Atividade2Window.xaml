@@ -1,0 +1,39 @@
+﻿<Window x:Class="RecuperaçãoA1WPF.Atividade2Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Atividade 2 — Média ponderada" Height="420" Width="500"
+        WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+    <Grid Background="#F3F5F9" Margin="22">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" Grid.RowSpan="5" Background="White" CornerRadius="14" Padding="26"/>
+        <TextBlock Grid.Row="0" Text="Calculadora de média ponderada" FontSize="23"
+                   FontWeight="Bold" Foreground="#23395B" Margin="0,0,0,24"/>
+        <Grid Grid.Row="1" Margin="0,0,0,16">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="120"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Nota da avaliação 1 (peso 4)" VerticalAlignment="Center"/>
+            <TextBox x:Name="Nota1TextBox" Grid.Column="1" Height="36" FontSize="16" Padding="7"/>
+        </Grid>
+        <Grid Grid.Row="2" Margin="0,0,0,16">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="120"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Nota da avaliação 2 (peso 6)" VerticalAlignment="Center"/>
+            <TextBox x:Name="Nota2TextBox" Grid.Column="1" Height="36" FontSize="16" Padding="7"/>
+        </Grid>
+        <Button Grid.Row="3" Content="Calcular média" Height="42" Margin="0,8,0,16"
+                Click="Calcular_Click"/>
+        <TextBlock x:Name="ResultadoTextBlock" Grid.Row="4" FontSize="22" FontWeight="Bold"
+                   Foreground="#23395B" VerticalAlignment="Top" Margin="0,12,0,0"
+                   TextWrapping="Wrap"/>
+    </Grid>
+</Window>

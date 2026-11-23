@@ -1,0 +1,29 @@
+﻿<Window x:Class="RecuperaçãoA1WPF.Atividade1Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Atividade 1 — Salário com bonificação" Height="430" Width="480"
+        WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+    <Grid Background="#F3F5F9">
+        <Border Background="White" CornerRadius="14" Padding="28" Margin="24">
+            <StackPanel>
+                <TextBlock Text="Calculadora de salário" FontSize="24" FontWeight="Bold"
+                           Foreground="#23395B" Margin="0,0,0,22"/>
+                <TextBlock Text="Salário-base (R$)" Margin="0,0,0,6"/>
+                <TextBox x:Name="SalarioTextBox" Height="36" FontSize="16" Padding="8"/>
+                <TextBlock Text="Percentual de bonificação" Margin="0,18,0,6"/>
+                <ComboBox x:Name="PercentualComboBox" Height="36" FontSize="16" SelectedIndex="0">
+                    <ComboBoxItem Content="5%" Tag="5"/>
+                    <ComboBoxItem Content="10%" Tag="10"/>
+                    <ComboBoxItem Content="15%" Tag="15"/>
+                    <ComboBoxItem Content="20%" Tag="20"/>
+                    <ComboBoxItem Content="25%" Tag="25"/>
+                </ComboBox>
+                <Button Content="Calcular" Height="42" Margin="0,22,0,14" Click="Calcular_Click"/>
+                <TextBlock x:Name="BonificacaoTextBlock" FontSize="16" FontWeight="SemiBold"
+                           Foreground="#3D5A80" Margin="0,4"/>
+                <TextBlock x:Name="SalarioFinalTextBlock" FontSize="19" FontWeight="Bold"
+                           Foreground="#23395B" Margin="0,8"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
